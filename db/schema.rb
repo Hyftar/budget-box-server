@@ -23,8 +23,8 @@ ActiveRecord::Schema.define(version: 20181228033503) do
   create_table "budgets", force: :cascade do |t|
     t.decimal "current_value", precision: 12, scale: 2
     t.decimal "initial_value", precision: 12, scale: 2
-    t.string "color"
-    t.string "name"
+    t.string "color", null: true
+    t.string "name", null: false
     t.integer "budget_group_id"
     t.index ["budget_group_id"], name: "index_budgets_on_budget_group_id"
   end
