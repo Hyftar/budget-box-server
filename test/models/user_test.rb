@@ -38,7 +38,7 @@ class UserTest < ActiveSupport::TestCase
     @u = User.new(
       name: 'Mathias',
       email: 'mathias@example.org',
-      password: 'test12345',
+      password: 'test12345'
     )
     @u.password_confirmation = 'bleh'
     assert_not @u.valid?, 'Password confirmation should be equal to password'
@@ -46,7 +46,6 @@ class UserTest < ActiveSupport::TestCase
     @u.password = 'blah'
     @u.password_confirmation = 'blah'
     assert_not @u.valid?, 'Password should be between 8 and 128 characters (6)'
-
 
     @u.password = 'a' * 129
     @u.password_confirmation = 'a' * 129
