@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 20181228193003) do
   create_table "events", force: :cascade do |t|
     t.integer "type", null: false
     t.integer "budget_group_id"
-    t.integer "budget_id"
+    t.integer "budget_id", null: true
     t.datetime "created_at", null: false
     t.index ["budget_group_id"], name: "index_events_on_budget_group_id"
     t.index ["budget_id"], name: "index_events_on_budget_id"

@@ -7,7 +7,7 @@ class BudgetTest < ActiveSupport::TestCase
     @b.color = "#000000"
     @b.initial_value = 1000.00
     @b.current_value = 100.00
-    @b.budget_group = budget_groups(:one)
+    @b.budget_group = budget_groups(:budget_group_one)
   end
 
   test "should create" do
